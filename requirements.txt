@@ -2,3 +2,6 @@ fastapi==0.115.12
 uvicorn==0.24.0.post1
 sqlalchemy
 python-dotenv
+passlib
+bcrypt==4.0.1
+python-multipart
