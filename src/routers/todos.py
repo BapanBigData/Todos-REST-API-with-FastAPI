@@ -11,11 +11,6 @@ from src.models.todos import TodoRequest
 router = APIRouter()
 
 
-@router.get("/", status_code=status.HTTP_200_OK)
-async def read_root():
-    return {"msg": "Hello, World!"}
-
-
 @router.get("/read_all", status_code=status.HTTP_200_OK)
 async def read_all(db: Annotated[Session, Depends(get_db)]):
     return db.query(Todos).all()
