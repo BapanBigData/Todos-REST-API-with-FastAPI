@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from starlette import status
 from passlib.context import CryptContext
-from src.utility.db_utils import get_db
+from src.utils.db_utils import get_db
 from src.database.models import Users
 from src.routers.auth import get_current_user
 from src.models.todos import UserVerification

@@ -10,7 +10,7 @@ from passlib.context import CryptContext
 from jose import jwt, JWTError
 from src.models.todos import CreateUserRequest, Token
 from src.database.models import Users
-from src.utility.db_utils import get_db
+from src.utils.db_utils import get_db
 
 
 # load from .env
