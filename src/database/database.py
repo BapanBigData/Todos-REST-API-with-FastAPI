@@ -5,16 +5,14 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
+# load from .env
 load_dotenv()
 
 # Read the database URL from the environment variable
 SQLALCHEMY_DATABASE_URL = os.getenv('SQLALCHEMY_DATABASE_URL')
 
 # Create the database engine (connection)
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL,
-    connect_args={"check_same_thread": False}  # only needed for SQLite
-)
+engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 # SessionLocal will be used to talk to the DB
 SessionLocal = sessionmaker(
